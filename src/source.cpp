@@ -5,19 +5,29 @@
 
 int main() {
     List l;     // default
-    l.Add(-1);
+    //l.Add(-1);
 
-    for (int i = 0; i < 19; ++i) l.Add(i);
-    //l.Add(19);
+    for (int i = 1; i <= 10; ++i) l.Add(i);
 
     std::cout << l;
+
+
+    l.Reverse();
+    std::cout << l;
+    l.PrintAddresses();
+
+#if 0
+    for (int i = 0; i < 9; ++i) {
+        l.ElevationShuffle();
+        std::cout << l;
+    }
 
     l.ElevationShuffle();
     std::cout << l;
     l.ElevationShuffle();
     std::cout << l;
-    l.ElevationShuffle();
-    std::cout << l;
+    //l.PrintAddresses();
+#endif
 
     return 0;
 }

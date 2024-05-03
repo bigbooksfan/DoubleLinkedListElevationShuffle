@@ -141,3 +141,27 @@ void List::ElevationShuffle() {
     head = v[0];
     tail = v.back();
 }
+
+void List::PrintAddresses() {
+    Node* runner = head;
+    while (runner != nullptr) {
+        std::cout << runner->GetVal();
+        std::cout << ": ";
+        std::cout << runner;
+        std::cout << std::endl;
+
+        runner = runner->GetNext();
+    }
+}
+
+void List::Reverse() {
+    Node* runner = head;
+    while (runner != nullptr) {
+        Node* tmp = runner->GetPrev();
+        runner->SetPrev(runner->GetNext());
+        runner->SetNext(tmp);
+
+        runner = runner->GetPrev();
+    }
+    std::swap(tail, head);
+}

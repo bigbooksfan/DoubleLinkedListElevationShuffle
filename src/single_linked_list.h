@@ -44,5 +44,7 @@ public:     // methods
     bool Is_unique();
     void ElevationShuffle();
 
+    void PrintAddresses();
+
     int GetSize() { return size; }
 };
